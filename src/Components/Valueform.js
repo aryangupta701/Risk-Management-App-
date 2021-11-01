@@ -16,16 +16,44 @@ const Valueform = () => {
         const stoploss=stoptag.value
 
         const targettag=document.getElementById("target-value")
-        targettag.value=(parseFloat(entry)+parseFloat(2*(entry-stoploss)))
+        targettag.value=(parseFloat(entry)+parseFloat(2*(entry-stoploss))).toFixed(3)
         const qtytag=document.getElementById("qty-value")
         qtytag.value=(((risk*capital)/100)/(entry-stoploss)).toFixed(3)
 
+    }
+
+    const defaultbutton =()=>{
+        const capitaltag=document.getElementById("capital-value")
+        capitaltag.defaultValue=capitaltag.value
+
+        const risktag=document.getElementById("risk-value")
+        risktag.defaultValue=risktag.value
+    }
+
+    const reset=()=>{
+        const capitaltag=document.getElementById("capital-value")
+        capitaltag.value=capitaltag.defaultValue
+
+        const risktag=document.getElementById("risk-value")
+        risktag.value=risktag.defaultValue
+
+        const entrytag=document.getElementById("entry-value")
+        entrytag.value={}
+
+        const stoptag=document.getElementById("stoploss-value")
+        stoptag.value={}
+
+        const targettag=document.getElementById("target-value")
+        targettag.value={}
+
+        const qtytag=document.getElementById("qty-value")
+        qtytag.value={}
     }
     return (
         <div>
             <form className="form-one">
                 <div>
-                <label>Enter Capital Amount</label>
+                <label>Enter Capital </label>
                 <input type="number" id="capital-value" defaultValue={50000} />
                 </div>
                 <div>
@@ -55,10 +83,10 @@ const Valueform = () => {
             <button id="Calculate-button" onClick={calculate}>Calculate </button>
             </div>
             <div>
-            <button id="set-as-default"> Set As Default </button>
+            <button id="set-as-default" onClick={defaultbutton}> Set As Default </button>
             </div>
             <div>
-            <button id="reset-button">Reset </button>
+            <button id="reset-button" onClick={reset}>Reset </button>
             </div>
             </div>
            
