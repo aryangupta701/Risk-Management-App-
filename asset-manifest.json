@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "//Risk-Management-App-/static/css/main.21ae2831.chunk.css",
-    "main.js": "//Risk-Management-App-/static/js/main.5cf51c8a.chunk.js",
-    "main.js.map": "//Risk-Management-App-/static/js/main.5cf51c8a.chunk.js.map",
-    "runtime-main.js": "//Risk-Management-App-/static/js/runtime-main.564387bc.js",
-    "runtime-main.js.map": "//Risk-Management-App-/static/js/runtime-main.564387bc.js.map",
-    "static/js/2.53cf9dd4.chunk.js": "//Risk-Management-App-/static/js/2.53cf9dd4.chunk.js",
-    "static/js/2.53cf9dd4.chunk.js.map": "//Risk-Management-App-/static/js/2.53cf9dd4.chunk.js.map",
-    "index.html": "//Risk-Management-App-/index.html",
-    "static/css/main.21ae2831.chunk.css.map": "//Risk-Management-App-/static/css/main.21ae2831.chunk.css.map",
-    "static/js/2.53cf9dd4.chunk.js.LICENSE.txt": "//Risk-Management-App-/static/js/2.53cf9dd4.chunk.js.LICENSE.txt"
+    "main.css": "/Risk-Management-App-/static/css/main.21ae2831.chunk.css",
+    "main.js": "/Risk-Management-App-/static/js/main.5cf51c8a.chunk.js",
+    "main.js.map": "/Risk-Management-App-/static/js/main.5cf51c8a.chunk.js.map",
+    "runtime-main.js": "/Risk-Management-App-/static/js/runtime-main.64a21570.js",
+    "runtime-main.js.map": "/Risk-Management-App-/static/js/runtime-main.64a21570.js.map",
+    "static/js/2.53cf9dd4.chunk.js": "/Risk-Management-App-/static/js/2.53cf9dd4.chunk.js",
+    "static/js/2.53cf9dd4.chunk.js.map": "/Risk-Management-App-/static/js/2.53cf9dd4.chunk.js.map",
+    "index.html": "/Risk-Management-App-/index.html",
+    "static/css/main.21ae2831.chunk.css.map": "/Risk-Management-App-/static/css/main.21ae2831.chunk.css.map",
+    "static/js/2.53cf9dd4.chunk.js.LICENSE.txt": "/Risk-Management-App-/static/js/2.53cf9dd4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.564387bc.js",
+    "static/js/runtime-main.64a21570.js",
     "static/js/2.53cf9dd4.chunk.js",
     "static/css/main.21ae2831.chunk.css",
     "static/js/main.5cf51c8a.chunk.js"
