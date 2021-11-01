@@ -7,18 +7,38 @@
 
 .App>header{
   margin: auto;
-  width: 170px;
+  width: 230px;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
   margin-bottom: 20px;
 }
 
-.form-one>div>span>label{
+.form-one>div>label{
   font-size: 20px;
 }
-.form-one>div>span{
-  width: 200px;
-}
+
 .form-one>div>input{
   margin-left: 20px;
   font-size: 20px;
   width: 100px;
+  text-align: right;
+  
   }
+.form-one>div{
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  border: 2px solid black ;
+  margin: 2px;
+  box-shadow: brown;
+}
+#Buttons{
+  padding:10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#Buttons>div>button{
+  font-size: 20px;
+}
