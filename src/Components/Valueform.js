@@ -1,6 +1,8 @@
 import React from 'react';
 import '../App.css';
 const Valueform = () => {
+    let flag=false;
+
     const calculate=()=>{
         const capitaltag=document.getElementById("capital-value")
         const capital=capitaltag.value
@@ -15,10 +17,16 @@ const Valueform = () => {
         const stoploss=stoptag.value
 
         const targettag=document.getElementById("target-value")
-        targettag.value=(parseFloat(entry)+parseFloat(2*(entry-stoploss))).toFixed(3)
         const qtytag=document.getElementById("qty-value")
+        if(!flag)
+        {
+        targettag.value=(parseFloat(entry)+parseFloat(2*(entry-stoploss))).toFixed(3)
         qtytag.value=(((risk*capital)/100)/(entry-stoploss)).toFixed(3)
-
+        }
+        else {
+        targettag.value=(parseFloat(entry)-parseFloat(2*(stoploss-entry))).toFixed(3)
+        qtytag.value=(((risk*capital)/100)/(stoploss-entry)).toFixed(3)
+        }
     }
 
     const defaultbutton =()=>{
@@ -28,7 +36,6 @@ const Valueform = () => {
         const risktag=document.getElementById("risk-value")
         risktag.defaultValue=risktag.value
     }
-
     const reset=()=>{
         const capitaltag=document.getElementById("capital-value")
         capitaltag.value=capitaltag.defaultValue
@@ -51,6 +58,13 @@ const Valueform = () => {
     return (
         <div>
             <form className="form-one">
+            <div id="toggle-bar" >
+            <span>Trade Type (Buy/Sell)</span>
+            <label className="switch">    
+            <input type="checkbox" onClick={()=>{flag=!flag}}/>
+            <span className="slider round"></span>
+            </label>
+                </div>
                 <div>
                 <label>Enter Capital </label>
                 <input type="number" id="capital-value" defaultValue={50000} />
