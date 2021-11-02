@@ -70,11 +70,11 @@ const Valueform = () => {
                 </div>
                 <div>
                 <label>Target Price</label>
-                <input type="number" id="target-value"/>
+                <input type="number" id="target-value" value=""/>
                 </div>
                 <div>
                 <label>Quantity </label>
-                <input type="number" id="qty-value"/>
+                <input type="number" id="qty-value" value="" />
                 </div>
             </form>
             <Calculatedvalues />
