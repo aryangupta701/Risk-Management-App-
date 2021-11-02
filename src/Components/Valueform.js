@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-import Calculatedvalues from './Calculatedvalues';
 const Valueform = () => {
     const calculate=()=>{
         const capitaltag=document.getElementById("capital-value")
@@ -77,7 +76,6 @@ const Valueform = () => {
                 <input type="number" id="qty-value" value="" />
                 </div>
             </form>
-            <Calculatedvalues />
             <div id="Buttons">
             <div>
             <button id="Calculate-button" onClick={calculate}>Calculate </button>
