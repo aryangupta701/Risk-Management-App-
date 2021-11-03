@@ -22,14 +22,18 @@ const Valueform = () => {
 
         const targettag=document.getElementById("target-value")
         const qtytag=document.getElementById("qty-value")
+
+        const amount=document.getElementById("amount-value")
         if(!flag)
         {
         targettag.value=(parseFloat(entry)+parseFloat(rr*(entry-stoploss))).toFixed(3)
         qtytag.value=(((risk*capital)/100)/(entry-stoploss)).toFixed(3)
+        amount.value=(parseFloat(entry)*qtytag.value)
         }
         else {
         targettag.value=(parseFloat(entry)-parseFloat(rr*(stoploss-entry))).toFixed(3)
         qtytag.value=(((risk*capital)/100)/(stoploss-entry)).toFixed(3)
+        amount.value=(parseFloat(entry)*qtytag.value)
         }
     }
 
@@ -64,6 +68,9 @@ const Valueform = () => {
 
         const qtytag=document.getElementById("qty-value")
         qtytag.value={}
+
+        const amount=document.getElementById("amount-value")
+        amount.value={}
     }
     return (
         <div>
@@ -102,6 +109,10 @@ const Valueform = () => {
                 <div>
                 <label>Quantity </label>
                 <input type="number" id="qty-value" value="" />
+                </div>
+                <div>
+                <label>Amount Req</label>
+                <input type="number" id="amount-value" value="" />
                 </div>
             </form>
             <div id="Buttons">
