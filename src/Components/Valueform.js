@@ -4,6 +4,10 @@ const Valueform = () => {
     let flag=false;
 
     const calculate=()=>{
+
+        const riskreward=document.getElementById("risk-reward")
+        const rr=riskreward.value
+
         const capitaltag=document.getElementById("capital-value")
         const capital=capitaltag.value
 
@@ -20,11 +24,11 @@ const Valueform = () => {
         const qtytag=document.getElementById("qty-value")
         if(!flag)
         {
-        targettag.value=(parseFloat(entry)+parseFloat(2*(entry-stoploss))).toFixed(3)
+        targettag.value=(parseFloat(entry)+parseFloat(rr*(entry-stoploss))).toFixed(3)
         qtytag.value=(((risk*capital)/100)/(entry-stoploss)).toFixed(3)
         }
         else {
-        targettag.value=(parseFloat(entry)-parseFloat(2*(stoploss-entry))).toFixed(3)
+        targettag.value=(parseFloat(entry)-parseFloat(rr*(stoploss-entry))).toFixed(3)
         qtytag.value=(((risk*capital)/100)/(stoploss-entry)).toFixed(3)
         }
     }
@@ -35,8 +39,14 @@ const Valueform = () => {
 
         const risktag=document.getElementById("risk-value")
         risktag.defaultValue=risktag.value
+
+        const riskreward=document.getElementById("risk-reward")
+        riskreward.defaultValue=riskreward.value
     }
     const reset=()=>{
+        const riskreward=document.getElementById("risk-reward")
+        riskreward.value=riskreward.defaultValue
+
         const capitaltag=document.getElementById("capital-value")
         capitaltag.value=capitaltag.defaultValue
 
@@ -72,6 +82,10 @@ const Valueform = () => {
                 <div>
                 <label>Enter Risk (%)</label>
                 <input type="number" id="risk-value" defaultValue={1} />
+                </div>
+                <div>
+                <label>Enter R:R</label>
+                <input type="number" id="risk-reward" defaultValue={2} />
                 </div>
                 <div>
                 <label>Entry Price</label>
